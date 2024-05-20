@@ -1,0 +1,48 @@
+---
+title: "Data Science"
+author: "l-flaherty"
+format: html
+editor: visual
+---
+
+## Part One
+
+We are asked the following questions (different emphasis just included for practice):
+
+1.  What do ~~pros~~ you think data science is all about?
+
+A: I think data science is somewhat of a catch-all term used to describe people who analyze, synthesize, and communicate data. As data is integral to most every business and sector, it is difficult to come up with a definition of exclusion.
+
+2.  What differences/similarities do **you** see between data scientists and statisticians?
+
+A: Based on the few links provided to us, I lean towards the view that statistics is at least a partly necessary (but insufficient) component of data science. It would probably be fair to say that statistics as taught in school is more theoretical in nature, and that people with some variation of "data scientist" for a job title may have stronger/broader CS skills than their statistician brethren. Additionally, I would hazard to guess that data scientists put more of an emphasis on data visualization and communication, whereas statisticians put more of an emphasis on analysis.
+
+3.  How do you view *yourself* in relation to these two areas?
+
+A: Of the two, I am probably more interested in pure stats, but do lots of "data science" type stuff for my job (that often isn't anything more than basic statistics). I like and want to improve in both areas.
+
+## Part Two
+
+We can use a built-in dataset to test the code chunks in this qmd file. For example, we can use the iris data set and look at the length of the petals. Note that while "\<-" is more commonly used for assignment in R, I prefer "=" (in isolation, "\<-" looks like a test for "less than negative...", while "=" is unambiguous since "==" is used to test "equal to").
+
+```{r}
+y <- density(iris$Sepal.Length) 
+```
+
+We now have an object "y". What are the characteristics of this object? We can explore the class, type, and structure below.
+
+```{r}
+class(y)   #class: "density"
+typeof(y)  #type: "list"#
+str(y)     #structure: list of 8#
+```
+
+Now that we know what we're dealing with, we can plot the data. For practice, we elect to hide the code and just display the output (by prefacing the code chunk with `{r, echo=FALSE}` instead of `{r}`). For thoroughness, we mention that we use the plot function along with:
+
+-   `main="Petal Length` to change the default title on the plot
+-   `ylab="Density"` to change the default Y-axis label
+-   `xlab="Width"` to change the default X-axis label
+
+```{r, echo=FALSE}
+plot(y, main="Petal Length", ylab="Density", xlab="Width")
+```
